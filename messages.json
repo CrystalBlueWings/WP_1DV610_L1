@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "type": "alien",
+      "text": "Hey, [userName]! Welcome to this page! Do you come in peace? 🖖👽",
+      "effect": "ufo"
+    },
+    {
+      "type": "rovarsprak",
+      "text": "[userName] in the language 'Rövarspråk' is: [rovarsprak_name]! 🗣️💬",
+      "effect": "bounce"
+    },
+    {
+      "type": "random",
+      "text": "Did you know, [userName]? You're an AWESOME programmer! ✌️😎",
+      "effect": "glow"
+    }
+  ]
+}

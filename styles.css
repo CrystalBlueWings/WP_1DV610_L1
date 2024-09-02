@@ -1,0 +1,171 @@
+html, body {
+  height: 100%; /* Ensures that body and html elements cover the entire height */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensure minimum height is full viewport */
+  position: relative; /* Allows absolutely positioned children */
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for readability */
+  opacity: 0.8;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  opacity: 0.9;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#message {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for readability */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  text-align: center;
+  pointer-events: none; /* Prevents interactions from interfering */
+  opacity: 0.8;
+}
+
+/* Alien Message Effect */
+.ufo-background {
+  background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmE0b2RkejBzdGVlZ3VseXBybjB0ejNuenB6ZndiYnQ4b2trbmo3MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/n41fR4Q3mYV5xoDH6K/giphy.webp'); /* Use the direct URL of the GIF as background */
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background */
+  background-attachment: fixed; /* Keep the background fixed when scrolling */
+  position: fixed; /* Use fixed to make it cover the full viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the viewport */
+  height: 100%; /* Full height of the viewport */
+  z-index: -1; /* Ensure it is behind all other elements */
+}
+
+
+/* Rövarspråk Message Effect */
+.rovarsprak-background {
+  background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXptOWtoeDAzb2UzOGMybzM0ZHB3Ym5mNTR4YXFmdnMybWtpdjUyeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ted7ocm0YOshQzNJ62/giphy.webp'); /* Set the specified GIF as background */
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background */
+  background-attachment: fixed; /* Keep the background fixed when scrolling */
+  position: fixed; /* Fixed to make it cover the full viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  z-index: -1; /* Ensure it is behind all other elements */
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+  color: #e91e63;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Random Message Effect */
+.glow {
+  /* border: 2px solid #4CAF50; */
+  border: 2px solid #FF69B4; /* A matching pink color */
+  /* box-shadow: 0 0 10px #4CAF50; */
+  box-shadow: 0 0 10px #FF69B4;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    /* box-shadow: 0 0 5px #4CAF50; */
+    box-shadow: 0 0 5px #FF69B4;
+  }
+
+  to {
+    /* box-shadow: 0 0 20px #4CAF50; */
+    box-shadow: 0 0 20px #FF69B4;
+  }
+}
+
+/* Random Message Effect - Gradient Background */
+.random-gradient-background {
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.3), rgba(255, 105, 130, 0.9)); /* Light to dark gradient */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* Container for the GIF to slide up */
+#gif-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: right;
+  pointer-events: none; /* Prevents interactions from interfering */
+}
+
+/* Slide up animation for the random message GIF */
+.slide-up-gif {
+  width: 210px; /* Adjust the size */
+  animation: slide-up 2s ease-out forwards; /* Animation for sliding up */
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%); /* Start below the viewport */
+  }
+  to {
+    transform: translateY(0); /* Move to the final position */
+  }
+}
